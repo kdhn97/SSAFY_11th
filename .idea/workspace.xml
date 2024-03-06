@@ -1,7 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6878220f-afb5-4dce-b058-a6928acb4143" name="Default Changelist" comment="" />
+    <list default="true" id="6878220f-afb5-4dce-b058-a6928acb4143" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/01_python/01_intro/hello.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/01_intro/python_hw_1_2/hw_1_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/01_intro/python_hw_1_4/hw_1_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/01_intro/python_ws_1_4/ws_1_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/01_intro/quote.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/02_basic_syntax/functions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/02_basic_syntax/operator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/02_basic_syntax/python_hw_2_2/hw_2_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/02_basic_syntax/python_hw_2_4/hw_2_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/02_basic_syntax/recursion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/02_basic_syntax/sequence.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/02_basic_syntax/ws_2_c.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/03_function/python_hw_3_2/hw_3_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/03_function/python_hw_3_4/hw_3_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/04_control_flow/module_practice.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/04_control_flow/python_hw_4_2/hw_4_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/04_control_flow/python_hw_4_4/hw_4_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/04_control_flow/question.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/04_control_flow/question_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/04_control_flow/recur.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/04_control_flow/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/04_control_flow/virtual_enviroment.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/07_OOP/decorator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/07_OOP/pokemon.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/07_OOP/python_hw_7_2/hw_7_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/07_OOP/python_hw_7_4/hw_7_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/07_OOP/python_ws_7_c/ws_7_c.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/07_OOP/푸키먼.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/08_OOP_2/practice/0004_거꾸로세로로출력/0004_practice.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/08_OOP_2/practice/0004_거꾸로세로로출력/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/08_OOP_2/practice/0005_N줄덧셈/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/08_OOP_2/practice/0005_N줄덧셈/solution.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/08_OOP_2/practice/0006_삼각형출력하기/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/08_OOP_2/practice/0006_삼각형출력하기/solution.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/08_OOP_2/practice/0007_2차원리스트전체합구하기/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/08_OOP_2/practice/0007_2차원리스트전체합구하기/solution.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/08_OOP_2/practice/01_practice.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/08_OOP_2/practice/02_practice.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/08_OOP_2/practice/IO_practice.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/08_OOP_2/practice/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/08_OOP_2/python_hw_8_2/hw_8_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/08_OOP_2/python_hw_8_4/hw_8_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/99_notebooks/01-fundamentals-of-python.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/99_notebooks/02-data-types.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/99_notebooks/03-type-conversion.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/99_notebooks/04-operator.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/99_notebooks/05-functions.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/99_notebooks/06-packing-unpacking.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/99_notebooks/07-modules.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/99_notebooks/08-control-of-flow.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/99_notebooks/09-data-structure.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/99_notebooks/10-classes.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/99_notebooks/11-errors-and-exceptions.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/99_notebooks/99-eafp-and-lbyl.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python01/python_hw_1_2/hw_1_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python01/python_hw_1_4/hw_1_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python01/python_ws_1_1/ws_1_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python01/python_ws_1_2/ws_1_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python01/python_ws_1_3/ws_1_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python01/python_ws_1_4/ws_1_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python01/python_ws_1_5/ws_1_5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python01/python_ws_1_a/ws_1_a.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python01/python_ws_1_b/ws_1_b.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python01/python_ws_1_c/ex_1_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python02/functions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python02/operator_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python02/python_hw_2_2/hw_2_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python02/python_hw_2_4/hw_2_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python02/python_ws_2_1/ws_2_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python02/python_ws_2_2/ws_2_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python02/python_ws_2_3/ws_2_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python02/python_ws_2_4/ws_2_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python02/python_ws_2_5/ws_2_5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python02/python_ws_2_a/ws_2_a.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python02/python_ws_2_b/ws_2_b.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python02/python_ws_2_c/ws_2_c.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python02/recoursion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python02/sequence.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python03/python_hw_3_2/hw_3_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python03/python_hw_3_4/hw_3_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python03/python_ws_3_1/ws_3_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python03/python_ws_3_2/ws_3_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python03/python_ws_3_a/ws_3_a.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python04/module.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python04/python_hw_4_2/hw_4_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python04/python_hw_4_4/hw_4_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python04/question.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python04/question_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python04/recur.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python04/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python04/virtaul_enviroment.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python05/python_hw_5_2/hw_5_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python05/python_hw_5_4/hw_5_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python05/python_ws_5_1/ws_5_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python05/python_ws_5_4/ws_5_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python05/python_ws_5_a/ws_5_a.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python06/python_hw_6_2/hw_6_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python06/python_hw_6_4/hw_6_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python06/python_ws_6_1/ws_6_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python06/python_ws_6_a/ws_6_a.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python06/python_ws_6_b/ws_6_b.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python06/python_ws_6_c/ws_6_c.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python07/OOP.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python07/python_hw_7_2/hw_7_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python07/python_hw_7_4/hw_7_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python08/python_hw_8_2/hw_8_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_python/python08/python_hw_8_4/hw_8_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +129,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="6878220f-afb5-4dce-b058-a6928acb4143" name="Default Changelist" comment="" />
