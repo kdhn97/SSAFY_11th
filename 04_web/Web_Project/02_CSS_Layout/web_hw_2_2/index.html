@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 클래스 선택자 . */
+    .card {
+      border: 1px black solid;
+      width: 300px;
+      height: 500px;
+    }
+    p {
+      text-align: left;
+      margin: 10px 30px 50px;
+    }
+    .name img {
+      width: 100%;
+    }
+    .name {
+      position: relative;
+    }
+    .name p {
+      /* position absolute 사용 시 부모 요소가 relative이 값이
+      있는지 확인하고 사용하기 없으면 body 따라감 */
+      position: absolute;
+      bottom: -46px;
+      width: 100%;
+      text-align: center;
+      background-color: rgb(255, 210, 126);
+    }
+    .card > .name > h1 {
+      position: absolute;
+      top: 300px;
+      left: 35px;
+      background-color: sandybrown;
+      width: 300px;
+      height: 50px;      
+      text-align: center;
+
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="name">
+      <img src="profile.jpg" alt="Profile Image">
+      <p>Name</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci unde officiis ad nostrum. Laboriosam mollitia similique provident fuga tenetur saepe sit, amet eaque neque eius quaerat expedita ea illum veniam.</p>
+  </div>
+</body>
+</html>
