@@ -6,19 +6,10 @@
 import os
 import subprocess
 
-# get current working directory
-# print(os.getcwd())
-# os.chdir('01.python/')
-# print(os.getcwd())
-# os.removedirs
-
 # 현재 폴더 경로를 변수에 저장
 current_folder = os.getcwd()
 # 현재 폴더 및 모든 하위 폴더를 반복
 for foldername, subfolder, filenames in os.walk(current_folder):
-    # print(foldername, 'fn')
-    # print(subfolder, 'sf')
-    # print(filenames, 'fn')
     # 하위 폴더 목록에 .git이 있다면
     if '.git' in subfolder:
         # root 디렉토리는 제외
