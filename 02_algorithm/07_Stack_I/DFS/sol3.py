@@ -10,14 +10,11 @@ def DFS(start):
 
 V, E = map(int, input().split())
 arr = list(map(int, input().split()))
-visited = [0]*(V+1)
-
+visited = [0] * (V + 1) # 0번 노드 없음.
 # 인접 행렬
-adj = [[0]*(V+1) for _ in range(V + 1)] # 0번 노드 없음
-for idx in range(E):
-    adj[arr[idx*2]][arr[idx*2+1]] = 1
-    adj[arr[idx*2+1]][arr[idx*2]] = 1
-for i in range(V + 1):
-    print(adj[i])
+adj = [[0] * (V + 1) for _ in range(V + 1)]
 
+for idx in range(E):
+    adj[arr[idx * 2]][arr[idx * 2 + 1]] = 1
+    adj[arr[idx * 2 + 1]][arr[idx * 2]] = 1
 DFS(1)

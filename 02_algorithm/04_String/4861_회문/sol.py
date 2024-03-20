@@ -1,30 +1,43 @@
 import sys
 sys.stdin = open('input.txt')
 
+# 전치 행렬 생성
+def trans():
+    for i in range(N):
+        for j in range(N):
+            if i == j: continue
+            if i > j:
+                arr[i][j], arr[j][i] = arr[j][i], arr[i][j]
+
+# 문자열 완전 탐색 함수
+def search(arr):
+    def is_palind(word):    # 회문 판별
+        return word == word[::-1]
+
+    # 전체 행 or 열 순회
+    for i in range(N):
+        # 회문의 길이 만큼 뺀 범위 순회
+        for j in range(N-M+1):
+            check_word = ''
+            for k in range(M):
+                check_word += arr[i][j+k]   # 범위만큼 문자열 생성
+            result = is_palind(check_word)
+            if result:
+                return check_word
+    return False
+
+
 T = int(input())
-for test_case in range(1, T + 1):
+
+for tc in range(1, T+1):
     N, M = map(int, input().split())
-    result = []
+    arr = [list(map(str, input())) for _ in range(N)]
 
-    #배열 입력 받기
-    arr = []
-    for _ in range(N):
-        arr.append(input())
+    result_1 = search(arr)  # 가로 탐색
+    trans()                 # 전치행렬 생성 (원본 변경)
+    result_2 = search(arr)  # 세로 탐색
 
-    #가로 검색
-    for row in range(N):
-        for col in range(N - M + 1):
-            # 회문이 맞는지 확인
-            if arr[row][col:col+M] == arr[row][col:col+M][::-1]:
-                # 회문이면 결과 리스트에 추가
-                result.append(arr[row][col:col+M])
-    #세로 검색
-    for row in range(N - M + 1):
-        for col in range(N):
-            col_list = [] # 새로 열 리스트를 만들어주기
-            for i in range(M):
-                col_list.append(arr[row+i][col])
-            if col_list == col_list[::-1]: # 세로줄이 회문이면
-                result.append(''.join(col_list)) # 결과리스트에 추가.
-
-    print(f'#{test_case} {result[0]}')
+    if result_1:
+        print(result_1)
+    else:
+        print(result_2)
