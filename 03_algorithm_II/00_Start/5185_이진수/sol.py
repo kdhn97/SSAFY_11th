@@ -1,12 +1,9 @@
 import sys
 sys.stdin = open('input.txt')
 
-hex_to_bin = {hex(idx)[2:].upper(): f'{idx:04b}' for idx in range(16)}
-
-T = int(input())
-for tc in range(1, T+1):
-    N, N16 = input().split()
-    print(f'#{tc}', end=' ')
-    for char in N16:
-        print(hex_to_bin[char], end='')
-    print()
+for test_case in range(1,int(input())+1):
+    N, S = input().split() # N: 4, S: 47FE
+    answer = ''
+    for i in range(int(N)):
+        answer += bin(int(S[i],16))[2:].zfill(4)
+    print(f"#{test_case} {answer}") # #1 0100011111111110
