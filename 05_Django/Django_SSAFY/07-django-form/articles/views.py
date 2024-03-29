@@ -21,19 +21,19 @@ def detail(request, pk):
 
 
 # def new(request):
-#     form = ArticleForm()
-#     context = {
-#         'form' : form,
-#     }
-#     return render(request, 'articles/new.html', context)
+# form = ArticleForm()
+# context = {
+#     'form': form,
+# }
+# return render(request, 'articles/new.html', context)
 
-# articles/views.py
+
 # def create(request):
 #     # title = request.POST.get('title')
 #     # content = request.POST.get('content')
 #     # article = Article(title=title, content=content)
 #     # article.save()
-#     form = ArticleForm(request.PDST)
+#     form = ArticleForm(request.POST)
 #     if form.is_valid():
 #         article = form.save()
 #         return redirect('articles:detail', article.pk)
@@ -41,18 +41,22 @@ def detail(request, pk):
 #         'form': form,
 #     }
 #     return render(request, 'articles/new.html', context)
+#     # return redirect('articles:new')
+
+
 def create(request):
-    form = ArticleForm(request.PDST)
-    if request.method == 'POST': # 기존의 create 함수
+    if request.method == 'POST':
+        form = ArticleForm(request.POST)
         if form.is_valid():
             article = form.save()
             return redirect('articles:detail', article.pk)
-    else: # 기존의 new 함수
+    else:  # POST가 아닌 다른 모든 경우
         form = ArticleForm()
     context = {
         'form': form,
     }
-    return render(request, 'articles/new.html', context)
+    return render(request, 'articles/create.html', context)
+
 
 def delete(request, pk):
     article = Article.objects.get(pk=pk)
@@ -60,29 +64,45 @@ def delete(request, pk):
     return redirect('articles:index')
 
 
-def edit(request, pk):
-    article = Article.objects.get(pk=pk)
-    form = ArticleForm(instance=article)
-    context = {
-        'article': article,
-        'form': form,
-    }
-    return render(request, 'articles/edit.html', context)
+# def edit(request, pk):
+#     article = Article.objects.get(pk=pk)
+#     form = ArticleForm(instance=article)
+#     context = {
+#         'article': article,
+#         'form': form,
+#     }
+#     return render(request, 'articles/edit.html', context)
 
-# articls/views.py
+
+# def update(request, pk):
+#     # title = request.POST.get('title')
+#     # content = request.POST.get('content')
+#     # article.title = title
+#     # article.content = content
+#     # article.save()
+#     article = Article.objects.get(pk=pk)
+#     form = ArticleForm(request.POST, instance=article)
+#     if form.is_valid():
+#         form.save()
+#         return redirect('articles:detail', article.pk)
+#     context = {
+#         'form': form,
+#         'article': article,
+#     }
+#     return render(request, 'articles/edit.html', context)
+
+
 def update(request, pk):
-    # title = request.POST.get('title')
-    # content = request.POST.get('content')
-    # article.title = title
-    # article.content = content
-    # article.save()
     article = Article.objects.get(pk=pk)
-    form = ArticleForm(request.PDST, instance=article)
-    if form.is_valid():
-        form.save()
-        return redirect('articles:detail', article.pk)
+    if request.method == 'POST':
+        form = ArticleForm(request.POST, instance=article)
+        if form.is_valid():
+            form.save()
+            return redirect('articles:detail', article.pk)
+    else:
+        form = ArticleForm(instance=article)
     context = {
-        'article': article,
         'form': form,
+        'article': article,
     }
-    return render(request, 'articles/edit.html', context)
+    return render(request, 'articles/update.html', context)

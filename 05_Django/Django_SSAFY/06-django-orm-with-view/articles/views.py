@@ -22,7 +22,7 @@ def detail(request, pk):
 def new(request):
     return render(request, 'articles/new.html')
 
-# articles/views.py
+
 def create(request):
     # print(request.GET)  # <QueryDict: {'title': ['제목'], 'content': ['내용']}>
     title = request.POST.get('title')

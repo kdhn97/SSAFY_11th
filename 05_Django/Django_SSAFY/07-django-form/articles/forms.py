@@ -1,13 +1,44 @@
-# articles/forms.py
-from django import forms 
+from django import forms
 from .models import Article
 
 # class ArticleForm(forms.Form):
 #     title = forms.CharField(max_length=10)
 #     content = forms.CharField(widget=forms.Textarea)
 
+
+# 위젯 미적용 버전
 class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
-        fields = '__all__' # 모든 속성 추가
-        # exclude = ('title',) # title 필드 보이지 않게
+        fields = '__all__'
+
+
+# 위젯 적용 버전
+class ArticleForm(forms.ModelForm):
+    title = forms.CharField(
+        label='제목',
+        widget=forms.TextInput(
+            attrs={
+                'class': 'my-title',
+                'placeholder': 'Enter the title',
+            }
+        )
+    )
+
+    content = forms.CharField(
+        label='내용',
+        widget=forms.Textarea(
+            attrs={
+                'class': 'my-title',
+                'placeholder': 'Enter the cotnent',
+                'rows': 5,
+                'cols': 50,
+            }
+        ),
+        error_messages={'required': '내용을 입력해주세요.'}
+    )
+
+    class Meta:
+        model = Article
+        fields = '__all__'
+        # exclude = ('title',)

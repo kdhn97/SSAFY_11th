@@ -24,5 +24,7 @@ urlpatterns = [
     path('dinner/', views.dinner),
     path('search/', views.search),
     path('throw/', views.throw),
-    path('catch/', views.catch)
+    path('catch/', views.catch),
+    path('greeting/<str:name>/', views.greeting),
+    path('articles/<int:num>/', views.detail),
 ]
