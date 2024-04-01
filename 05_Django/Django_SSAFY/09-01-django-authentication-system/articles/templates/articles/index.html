@@ -6,7 +6,13 @@
   <title>Document</title>
 </head>
 <body>
+  <h2>반갑습니다, {{ user.username }} 님</h2>
   <h1>Articles</h1>
+  <a href="{% url "accounts:login" %}">Login</a>
+  <form action="{% url "accounts:logout" %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Logout">
+  </form>
   <a href="{% url "articles:create" %}">CREATE</a>
   <hr>
   {% for article in articles %}
