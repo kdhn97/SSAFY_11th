@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <a href="{% url "accounts:login" %}">[Login]</a>
+  <a href="{% url "accounts:sighup" %}">[Sigh Up]</a>
+
+  <h1>전체 유저 목록</h1>
+  <ul>
+    <li></li>
+  </ul>
+  <hr>
+{% endblock content %}
