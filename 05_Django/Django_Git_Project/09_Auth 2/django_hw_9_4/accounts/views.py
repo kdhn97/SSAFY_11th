@@ -6,6 +6,8 @@ from .forms import CustomUserCreationForm
 
 User = get_user_model()
 
+
+
 # Create your views here.
 def index(request):
     persons = User.objects.all()
@@ -13,6 +15,8 @@ def index(request):
         'persons': persons
     }
     return render(request, 'accounts/index.html', context)
+
+
 
 def login(request):
     if request.method == 'POST':

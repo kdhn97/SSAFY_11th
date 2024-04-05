@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
+  <a href="{% url 'accounts:login' %}">[LOGIN]</a>
+  <a href="{% url 'accounts:signup' %}">[Sign Up]</a>
   <h1>LOGIN Page</h1>
   <form method="POST">
     {% csrf_token %}
