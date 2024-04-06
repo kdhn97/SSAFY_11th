@@ -11,9 +11,9 @@ let codefactory = '코드팩토리';
 var $ive = '아이브'
 const _yujin = '안유진';
 
-console.log(codefactory)
-console.log($ive)
-console.log(_yujin)
+console.log(codefactory); // 코드팩토리
+console.log($ive); // 아이브
+console.log(_yujin); // 안유진
 
 /**
  * Naming Conventions 2
@@ -21,5 +21,5 @@ console.log(_yujin)
  * 2) snake_case -> 띄어쓰기 할 때 언더스코어
  */
 // camelCase 예시
-const anYuJin = '안유진'
-console.log(anYuJin)
+const anYuJin = '안유진';
+console.log(anYuJin); // 안유진
