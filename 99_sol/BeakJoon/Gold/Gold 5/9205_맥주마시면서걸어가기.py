@@ -16,9 +16,6 @@ def func(s, e):
             s[1] = arr[i][1]
             func(s, e)
             visited[i] = 0
-        else:
-            print('sad')
-            return
 
 T = int(input())
 for test_case in (1, T+1):
@@ -29,6 +26,7 @@ for test_case in (1, T+1):
     end = list(map(int, input().split()))
     visited = [0] * len(arr)
     func(start, end)
+
     if result:
         print('happy')
     else:
