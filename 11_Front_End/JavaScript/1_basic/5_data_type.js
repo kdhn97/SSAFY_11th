@@ -16,10 +16,10 @@ const age = 32;
 const tempature = -10;
 const pi = 3.14;
 
-console.log(typeof age);
+console.log(typeof age); // number
 
 const infinity = Infinity;
-console.log(typeof infinity)
+console.log(typeof infinity) // number
 
 /**
  * String 타입
@@ -28,7 +28,7 @@ const codeFactory = '코드팩토리';
 console.log(typeof codeFactory);
 
 const ive = "'아이브' 안유진";
-console.log(ive);
+console.log(ive); // string
 
 /**
  * Template Listeral
@@ -42,30 +42,30 @@ const iveYuJin = '아이브\n안유진';
 console.log(iveYuJin);
 
 const iveWonYoung = '아이브\t장원영';
-console.log(iveWonYoung);
+console.log(iveWonYoung); // 아이브	장원영
 
 const backSlash = '아이브\\코드팩토리';
-console.log(backSlash);
+console.log(backSlash); // 아이브\코드팩토리
 
 const smallQutoation = '아이브\'코드팩토리';
-console.log(smallQutoation);
+console.log(smallQutoation); // 아이브'코드팩토리
 
 const iveWonYoung2 = `아이브
 장원영`;
 console.log(iveWonYoung2);
-console.log(typeof iveWonYoung2);
+console.log(typeof iveWonYoung2); // string
 
 const groupName = '아이브';
-console.log(groupName + '안유진');
-console.log(`${groupName} 안유진`)
+console.log(groupName + '안유진'); // 아이브안유진
+console.log(`${groupName} 안유진`) // 아이브 안유진
 
 /**
  * Boolean 타입
  */
 const isTrue = true;
 const isFalse = false;
-console.log(typeof isTrue);
-console.log(typeof isFalse);
+console.log(typeof isTrue); // boolean
+console.log(typeof isFalse); // boolean
 
 /**
  * undefined
@@ -75,8 +75,8 @@ console.log(typeof isFalse);
  * 직접 undefined로 값을 초기화하는건 지양해야한다
  */
 let noInit;
-console.log(noInit);
-console.log(typeof noInit);
+console.log(noInit); // undefined
+console.log(typeof noInit); // undefined
 
 /**
  * null 타입
@@ -86,8 +86,8 @@ console.log(typeof noInit);
  * JS에서는 개발자가 명시적으로 없는 값으로 초기화할 떄 사용
  */
 let init = null;
-console.log(init);
-console.log(typeof init);
+console.log(init); // null
+console.log(typeof init); // object
 
 /**
  * Symbol 타입
@@ -97,10 +97,10 @@ console.log(typeof init);
  */
 const test1 = '1';
 const test2 = '2';
-console.log(test1 == test2);
+console.log(test1 == test2); // false
 const symbol1 = Symbol('1');
 const symbol2 = Symbol('1');
-console.log(symbol1 == symbol2);
+console.log(symbol1 == symbol2); // false
 
 /**
  * Object 타입
@@ -111,9 +111,9 @@ console.log(symbol1 == symbol2);
 const dictionary = {
     red: '빨간색',
 };
-console.log(dictionary);
-console.log(dictionary['red']);
-console.log(typeof dictionary)
+console.log(dictionary); // { red: '빨간색' }
+console.log(dictionary['red']); // 빨간색
+console.log(typeof dictionary); // object
 
 /**
  * Array 타입
@@ -124,16 +124,16 @@ const iveMembersArray = [
     '안유진',
     '장원영',
 ];
-console.log(iveMembersArray);
+console.log(iveMembersArray); // [ '안유진', '장원영' ]
 
 /**
  * index
  * 
  * 0부터 시작한다
  */
-console.log(iveMembersArray[0])
+console.log(iveMembersArray[0]) // 안유진
 iveMembersArray[0] = '코드팩토리';
-console.log(iveMembersArray);
+console.log(iveMembersArray); // [ '코드팩토리', '장원영' ]
 
 /**
  * static typing ( C언어 )

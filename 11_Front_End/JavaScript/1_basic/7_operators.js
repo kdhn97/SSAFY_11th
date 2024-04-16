@@ -37,12 +37,14 @@ console.log(result); // 1
 
 result = number ++;
 console.log(result, number); // 1 2
+// ++를 뒤에 붙이면 result로 할당이 된 후 number ++로 증가
 
 result = number --;
 console.log(result, number); // 2 1
 
 result = ++ number;
 console.log(result, number); // 2 2
+// ++를 앞에 붙이면 값이 증가된 후에 result에 할당됨
 
 result = -- number;
 console.log(result, number) // 1 1

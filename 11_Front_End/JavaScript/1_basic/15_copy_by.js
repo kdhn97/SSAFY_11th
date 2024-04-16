@@ -98,6 +98,6 @@ console.log(originalObj === cloneObj); // false
   const numbers = [1, 3, 5];
   const numbers2 = [
     ...numbers,
-    10.
+    10
   ];
   console.log(numbers2); // [ 1, 3, 5, 10 ]
