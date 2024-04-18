@@ -19,27 +19,27 @@
             <a class="nav-link" aria-current="page" href="{% url "movies:index" %}">홈으로</a>
           </li>
 
-        {% if request.user.is_authenticated %} <!-- 로그인이 되어 있다면 화면에 보여준다 -->
-          <li class="nav-item">
-            <a class="nav-link" href="{% url "movies:create" %}">정보생성</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url "accounts:update"%}">회원정보수정</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url "password_update" user.pk%}">비밀번호변경</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url "accounts:logout" %}">로그아웃</a>
-          </li>
-        {% else %} <!-- 로그아웃이 되어 있다면 화면에 보여준다 -->
-          <li class="nav-item">
-            <a class="nav-link" href="{% url "accounts:signup" %}">회원가입</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url "accounts:login" %}">로그인</a>
-          </li>
-        {% endif %}
+    {% if request.user.is_authenticated %} <!-- 로그인이 되어 있다면 화면에 보여준다 -->
+      <li class="nav-item">
+        <a class="nav-link" href="{% url "movies:create" %}">정보생성</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url "accounts:update"%}">회원정보수정</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url "password_update" user.pk%}">비밀번호변경</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url "accounts:logout" %}">로그아웃</a>
+      </li>
+    {% else %} <!-- 로그아웃이 되어 있다면 화면에 보여준다 -->
+      <li class="nav-item">
+        <a class="nav-link" href="{% url "accounts:signup" %}">회원가입</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url "accounts:login" %}">로그인</a>
+      </li>
+    {% endif %}
 
         </ul>
       </div>
