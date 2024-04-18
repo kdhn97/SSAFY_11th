@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 테스트 케이스 수
+    const T = 3 
+    // 각 TC별 데이터
+    // N : 주어질 정수 개수
+    // ai : N개 만큼의 정수 num 0 <= num <= 1000000
+    const numbers = [
+      {
+        N: 5,
+        ai: [ 477162, 658880, 751280, 927930, 297191 ]
+      },
+      {
+        N: 5,
+        ai: [ 565469, 851600, 460874, 148692, 111090 ]
+      },
+      {
+        N: 10,
+        ai: [ 784386, 279993, 982220, 996285, 614710, 992232, 195265, 359810, 919192, 158175 ]
+      },
+    ]
+
+    // N개의 정수 ai중 최댓값과 최솟값의 차를 출력하시오.
+    // #1 630739
+    // #2 740510
+    // #3 838110
+    // python dict = {'immutable': value}
+    // python dict[(0, 0)]
+    for (let tc = 0; tc < T; tc++) {
+      // let N = 'N'
+      // console.log(numbers[tc][N]) // ReferenceError: Cannot access 'N' before initialization
+      // console.log(numbers[tc][N])
+      // const N = numbers[tc]['N']
+      // const ai = numbers[tc]['ai']
+
+      // python class Person:; name = ''
+      // python p1=Person(); p1.name
+      // JS Object -> 속성 접근시 dot notation 가능하다.
+      // const N = numbers[tc].N
+      // const ai = numbers[tc].ai
+      // console.log(N, ai)
+
+      // ES6+ 
+      const { N, ai } = numbers[tc]
+      // let max = -Infinity
+      // let min = Infinity
+      // console.log(ai)
+      // python len(arr) -> big(N)
+      // for (let idx = 0; idx < N; idx++) {
+      // for (let idx = 0; idx < ai.length; idx++) {
+
+      //   if (min > ai[idx]) {
+      //     min = ai[idx]
+      //   }
+
+      //   if (max < ai[idx]) {
+      //     max = ai[idx]
+      //   }
+      // }
+
+      // for (const num of ai) {
+      //   if (min > num) {
+      //     min = num
+      //   }
+
+      //   if (max < num) {
+      //     max = num
+      //   }
+      // }
+      // console.log(ai)
+      const min = Math.min(...ai) // ... -> 언패킹과 같은 역할
+      const max = Math.max(...ai)
+
+      console.log(`#${tc + 1} ${max - min}`)
+      
+    }
+
+    const obj1 = {
+      name: 'Alice',
+      age: 30
+    }
+
+    // obj2 -> name, age, address, ...
+    // python arr1 = [1, 2, 3]
+    // python arr2 = list(arr1)
+    const obj2 = {
+      ...obj1,
+      address: '주소'
+    }
+    obj2.name = 'Bob'
+    console.log(obj1)
+    console.log(obj2)
+
+  </script>
+</body>
+</html>
