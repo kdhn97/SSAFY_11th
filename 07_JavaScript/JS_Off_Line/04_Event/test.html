@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outerouter {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+        #outer {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        #inner {
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body style="height: 1200px;">
+    <h1>test</h1>
+
+    <div id="outerouter">
+        outerouter
+        <div id="outer">
+            outer
+            <div id="inner">
+                inner
+            </div>
+        </div>
+    </div>
+    <script>
+        const outerouter = document.querySelector('#outerouter')
+        outerouter.addEventListener('click', function(){
+            console.log(event.currentTarget.id)
+            console.log(event.target.id)
+        })
+
+        const outer = document.querySelector('#outer')
+        outer.addEventListener('click', function(){
+            console.log('capuring')
+        }, true)
+
+        const body = document.querySelector('body')
+        // 클릭 시 해당 문구 출력
+        // body.addEventListener('click', function(){
+        //     console.log(event)
+        //     console.log('body clicked!!!')
+        // })
+
+        // 우클릭 시 메뉴 못 나오게 막음
+        // body.addEventListener('contextmenu', function(){
+        //    event.preventDefault()
+        // })
+
+        // 클릭 못하게 막음
+        body.addEventListener('selectstart', function(){
+            event.preventDefault()
+            event.stopPropagation()
+        })
+
+        body.addEventListener('copy', function(){
+            const selection = window.getSelection()
+            const copiedText = selection.toString()
+            const addText = '어떤 내용 추가'
+            const result = copiedText + addText
+            event.clipboardData.setData('text/plain', result)
+            event.preventDefault()
+        })
+    </script>
+</body>
+</html>
