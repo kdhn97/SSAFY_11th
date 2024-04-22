@@ -39,6 +39,7 @@ def detail(request, pk):
 def update(request, pk):
     movie = Movie.objects.get(pk=pk)
     if request.method == 'POST':
+        # instance= 수정 전 해당 정보를 그대로 가져오기
         form = MovieForm(request.POST, instance=movie)
         if form.is_valid():
             form.save()
