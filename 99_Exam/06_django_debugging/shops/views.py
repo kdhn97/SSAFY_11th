@@ -4,7 +4,12 @@ from .forms import ProductForm, ReviewForm
 
 
 def index(request):
-    product_list = Product.objects.all()
+    if request.GET.get('sort') == 'price_asc':
+        product_list = Product.objects.order_by('price')
+    elif request.GET.get('sort') == 'price_desc':
+        product_list = Product.objects.order_by('-price')
+    else:
+        product_list = Product.objects.all()
     context = {
         'product_list': product_list,
     }
@@ -53,7 +58,7 @@ def update(request, product_pk):
         return redirect('shops:detail', product_pk)
 
     if request.method == 'POST':
-        form = ProductForm(request.POST, instance=product)
+        form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
             return redirect('shops:detail', product.pk)
@@ -127,9 +132,9 @@ def order(request, product_pk):
 
     product = Product.objects.get(pk=product_pk)
     if product in request.user.order_list.all():
-        request.user.order_list.add(product)
-    else:
         request.user.order_list.remove(product)
+    else:
+        request.user.order_list.add(product)
     
     return redirect('shops:index')
 
@@ -137,8 +142,12 @@ def order(request, product_pk):
 # 문제 9. 총 금액 출력하는 부분 추가하기
 def order_detail(request):
     order_list = request.user.order_list.all()
-
+    # total = 0
+    # for product in order_list:
+    #     total += product.price
     context = {
         'order_list': order_list,
+        # 'total': total
+        'total': sum([product.price for product in order_list])
     }
     return render(request, 'shops/my_order.html', context)

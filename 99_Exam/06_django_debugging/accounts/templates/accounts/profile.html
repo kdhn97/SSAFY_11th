@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <h1> {{ person }} PROFILE PAGE</h1>
 <hr>
@@ -9,7 +10,10 @@
   -->
   {% if person.image %}
     <p><img class="w-25" src="{{ person.image.url }}" alt="{{ person.image }}"></p>
+    {% else %}
+    <p><img class="w-25" src="{% static "/no_user_img.png" %}" alt="default_img"></p>
   {% endif %}
+
   <p>Name : {{ person.last_name }} {{ person.first_name }}</p>
   <p>E-mail : {{ person.email }}</p>
   <p>Address : {{ person.address }}</p>

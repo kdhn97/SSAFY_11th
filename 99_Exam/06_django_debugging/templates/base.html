@@ -18,7 +18,7 @@
       <!--
          문제 4. 로그아웃이 정상적으로 이루어지도록 코드 수정
       -->
-      <form action="{% url "accounts:logout" %}">
+      <form action="{% url "accounts:logout" %}" method="POST">
         {% csrf_token %}
         <input type="submit" value="LOGOUT">
       </form>

@@ -71,7 +71,7 @@ def update_user(request):
     if request.method == 'POST':
         form = CustomUserChangeForm(request.POST, request.FILES, instance=request.user)
         if form.is_valid():
-            form.save(commit=False)
+            form.save()
             return redirect('accounts:profile', request.user.username)
         
     else:
@@ -87,6 +87,9 @@ def update_user(request):
 # 본인만 비밀번호를 수정할 수 있도록 수정
 def change_password(request, user_pk):
     person = get_user_model().objects.get(pk=user_pk)
+    if request.user != person:
+        return redirect('shops:index')
+
     if not request.user.is_authenticated:
         return redirect('accounts:login')
     
