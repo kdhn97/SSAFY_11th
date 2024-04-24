@@ -4,6 +4,7 @@ from .forms import ProductForm, ReviewForm
 
 
 def index(request):
+    # 정답 11. 가격에 따른 정렬
     if request.GET.get('sort') == 'price_asc':
         product_list = Product.objects.order_by('price')
     elif request.GET.get('sort') == 'price_desc':
@@ -58,6 +59,7 @@ def update(request, product_pk):
         return redirect('shops:detail', product_pk)
 
     if request.method == 'POST':
+        # 정답 10. request.FILES 작성, 이미지 업데이트
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
@@ -131,10 +133,11 @@ def order(request, product_pk):
         return redirect('shops:index')
 
     product = Product.objects.get(pk=product_pk)
+    # 정답 5. 만약 user의 order_list의 목록 중에서 product에 포함되어 있다면
     if product in request.user.order_list.all():
-        request.user.order_list.remove(product)
-    else:
-        request.user.order_list.add(product)
+        request.user.order_list.remove(product) # 제거
+    else: 
+        request.user.order_list.add(product) # 추가
     
     return redirect('shops:index')
 
@@ -142,6 +145,7 @@ def order(request, product_pk):
 # 문제 9. 총 금액 출력하는 부분 추가하기
 def order_detail(request):
     order_list = request.user.order_list.all()
+    # 정답 9. total 총합 구하기
     # total = 0
     # for product in order_list:
     #     total += product.price

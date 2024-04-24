@@ -8,7 +8,7 @@
 -->
 <form action="" method="POST">
   {% csrf_token %}
-  {{ form.as_p }}
+  {{ form.as_p }} <!-- 정답 2. .as_p로 폼 수정 -->
   <input type="submit" value="LOG IN">
 </form>
 {% endblock content %}

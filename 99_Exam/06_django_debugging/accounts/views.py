@@ -71,7 +71,7 @@ def update_user(request):
     if request.method == 'POST':
         form = CustomUserChangeForm(request.POST, request.FILES, instance=request.user)
         if form.is_valid():
-            form.save()
+            form.save() # 정답 7. DB에 올리지않고 저장, commit=False를 제거해준다
             return redirect('accounts:profile', request.user.username)
         
     else:
@@ -87,6 +87,7 @@ def update_user(request):
 # 본인만 비밀번호를 수정할 수 있도록 수정
 def change_password(request, user_pk):
     person = get_user_model().objects.get(pk=user_pk)
+    # 정답 6. 요청한 유저가 같지 않다면 index로 redirect한다
     if request.user != person:
         return redirect('shops:index')
 

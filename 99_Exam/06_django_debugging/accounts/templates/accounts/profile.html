@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static %} <!-- 정답 8. setting.py의 static 최상위 폴더를 가져온다 -->
 {% block content %}
 <h1> {{ person }} PROFILE PAGE</h1>
 <hr>
@@ -10,10 +10,9 @@
   -->
   {% if person.image %}
     <p><img class="w-25" src="{{ person.image.url }}" alt="{{ person.image }}"></p>
-    {% else %}
-    <p><img class="w-25" src="{% static "/no_user_img.png" %}" alt="default_img"></p>
+    {% else %} <!-- 정답 8. static "/no_user_img.png"으로 이미지 가져오기 -->
+    <p><img class="w-25" src="{% static "/no_user_img.png" %}" alt="no-user-image"></p>
   {% endif %}
-
   <p>Name : {{ person.last_name }} {{ person.first_name }}</p>
   <p>E-mail : {{ person.email }}</p>
   <p>Address : {{ person.address }}</p>
