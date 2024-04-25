@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <p>{{ number }}</p>
+    <!-- getter -> object.value가 반환되도록 해 놨다. -->
+    <p>{{ obj.age }}</p>
+    <p>{{ obj.name }}</p>
+    <button @click="ageAdd">AGE++</button>
+    <p>{{ finalObj.finalAge }}</p>
+    <button @click="finalAgeAdd">FINALAGE++</button>
+    <!-- {{ 콧수염 구문 }} JS 표현식 사용 가능 -->
+    <p>{{ number++ }}</p>
+    <button @click="number++">+</button>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    // let inputValue = document.querySelector('input').value
+    // inputValue = ''
+    // input의 value를 빈 문자열로 바꿨는데 왜 input 태그 내부 안비워지나요?
+
+    // const Vue = { createApp(), }
+    const { createApp, ref, watch } = Vue
+    // createApp 메서드의 반환값을 app 에 할당 -> app도 객체
+    const app = createApp({
+      setup() {
+        const number = ref(1)
+        const obj = {
+          age: ref(0),
+          name: 'Alice'
+        }
+        const { age } = obj
+        const ageAdd = () => {
+          age.value += 1
+        }
+
+        const finalObj = ref({finalAge: 3})
+
+        const finalAgeAdd = () => {
+          finalObj.value.finalAge += 1
+        }
+        // python_dict = {'age': 3}
+        // python_value = python_dict['age']
+        // 객체 축약 표기 가능하다.
+        watch(number, (newVal, oldVal) => {
+          console.log(`바뀌기 전 값 ${oldVal}, 바뀐 값 ${newVal}`)
+        })
+        return {
+          number,
+          obj,
+          age,
+          ageAdd,
+          finalObj,
+          finalAgeAdd
+        }
+      }
+    })
+    // mount 메서드는 인자로 선택자를 받는다.
+    app.mount('#app')
+  </script>
+</body>
+</html> 
