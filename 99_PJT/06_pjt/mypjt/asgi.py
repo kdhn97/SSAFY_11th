@@ -1,12 +1,10 @@
-# 배포(서버 공개)할 때 쓰는 파일
-
 """
 ASGI config for mypjt project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
 For more information on this file, see
-https://docs.djangoproject.com/en/3.2/howto/deployment/asgi/
+https://docs.djangoproject.com/en/5.0/howto/deployment/asgi/
 """
 
 import os
